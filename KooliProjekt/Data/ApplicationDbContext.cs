@@ -8,6 +8,7 @@ namespace KooliProjekt.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
     }
 }
