@@ -1,7 +1,11 @@
-﻿namespace KooliProjekt.Data
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace KooliProjekt.Data
 {
     public class InvestmentClass
     {
-        public class int 
+        public int ClassID {  get; set; }
+
+        public string Name { get; set; }
     }
 }

@@ -9,4 +9,4 @@
         public float ChangeSinceStart { get; set; }
     }
 }
-}
+

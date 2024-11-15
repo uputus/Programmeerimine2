@@ -10,9 +10,6 @@ namespace KooliProjekt.Data
         public string AssetType { get; set; }
         public string AssetDetails { get; set; }
 
-        public Asset() 
-        {
-            Lines = new List
-        }
+
     }
 }
