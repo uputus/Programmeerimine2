@@ -2,6 +2,7 @@ using KooliProjekt.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace KooliProjekt
 {
     public class Program
