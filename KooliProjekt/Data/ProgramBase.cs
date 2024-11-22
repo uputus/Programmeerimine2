@@ -1,6 +1,6 @@
 ﻿namespace KooliProjekt.Data
 {
-    public class Program
+    public class ProgramBase
     {
         public static void Main(string[] args)
         {
