@@ -8,7 +8,7 @@ namespace KooliProjekt.Data
 
         // Välisvõti Asset klassi jaoks
         public int AssetID { get; set; }
-        public Asset Asset { get; set; }
+        public required Asset Asset { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
@@ -19,6 +19,6 @@ namespace KooliProjekt.Data
 
         [Required]
         [StringLength(50)]
-        public string TransactionType { get; set; }
+        public required string TransactionType { get; set; }
     }
 }

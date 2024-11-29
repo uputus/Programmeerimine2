@@ -1,30 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
+﻿using KooliProjekt.Data;
+using System.ComponentModel.DataAnnotations;
 
-namespace KooliProjekt.Data
+public class Asset
 {
-    public class Asset
-    {
-        public int AssetID { get; set; }
+    [Key]
+    public int AssetID { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string Name { get; set; }
+    [Required]
+    [StringLength(100)]
+    public required string Name { get; set; }
 
-        // Välisvõti InvestmentClass klassi jaoks
-        public int ClassID { get; set; }
-        public InvestmentClass InvestmentClass { get; set; }
+    public int ClassID { get; set; }
+    public required InvestmentClass InvestmentClass { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string AssetType { get; set; }
+    [Required]
+    [StringLength(50)]
+    public required string AssetType { get; set; }
 
-        public string AssetDetails { get; set; }
+    public required string AssetDetails { get; set; }
 
-        // Seos Investment'itega
-        public ICollection<Investment> Investments { get; set; }
-
-        // Seos Transaction'itega
-        public ICollection<Transaction> Transactions { get; set; }
-    }
+    // Navigation properties
+    public ICollection<Investment> Investments { get; set; } = new List<Investment>();
+    public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 }
