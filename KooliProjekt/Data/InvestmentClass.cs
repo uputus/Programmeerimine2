@@ -15,6 +15,9 @@ namespace KooliProjekt.Data
 
         public required string Description { get; set; }
 
+
     }
 
 }
+
+
