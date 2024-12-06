@@ -11,6 +11,10 @@ public class Asset
     public required string Name { get; set; }
 
     public int ClassID { get; set; }
+
+    // Foreign Key
+    // Foreign Key
+    public int SelectedClassID { get; set; } // Kontrolli, kas see on õigesti määratud
     public required InvestmentClass InvestmentClass { get; set; }
 
     [Required]
@@ -18,6 +22,8 @@ public class Asset
     public required string AssetType { get; set; }
 
     public required string AssetDetails { get; set; }
+
+
 
     // Navigation properties
     public ICollection<Investment> Investments { get; set; } = new List<Investment>();

@@ -45,8 +45,13 @@ namespace KooliProjekt.Controllers
         // GET: Assets/Create
         public IActionResult Create()
         {
+            // Andmete ettevalmistamine dropdown-iks
+            ViewData["Assets"] = new SelectList(_context.Assets, "AssetID", "Name");
+            ViewData["InvestmentClasses"] = new SelectList(_context.InvestmentClasses, "ClassID", "Name");
+
             return View();
         }
+
 
         // POST: Assets/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -152,5 +157,8 @@ namespace KooliProjekt.Controllers
         {
             return _context.Assets.Any(e => e.AssetID == id);
         }
+
+      
+
     }
 }

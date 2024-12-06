@@ -12,35 +12,27 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Dropdown for Asset -->
             <div class="form-group">
                 <label asp-for="AssetID" class="control-label"></label>
-                <select asp-for="AssetID" class ="form-control" asp-items="ViewBag.AssetID"></select>
+                <select asp-for="AssetID" asp-items="ViewData['Assets']" class="form-control"></select>
+                <span asp-validation-for="AssetID" class="text-danger"></span>
             </div>
+
+            <!-- Dropdown for Portfolio -->
             <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
+                <label asp-for="PortfolioID" class="control-label"></label>
+                <select asp-for="PortfolioID" asp-items="ViewData['Portfolios']" class="form-control"></select>
+                <span asp-validation-for="PortfolioID" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Value" class="control-label"></label>
-                <input asp-for="Value" class="form-control" />
-                <span asp-validation-for="Value" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MoneyInvested" class="control-label"></label>
-                <input asp-for="MoneyInvested" class="form-control" />
-                <span asp-validation-for="MoneyInvested" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CashBalance" class="control-label"></label>
-                <input asp-for="CashBalance" class="form-control" />
-                <span asp-validation-for="CashBalance" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -53,5 +45,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

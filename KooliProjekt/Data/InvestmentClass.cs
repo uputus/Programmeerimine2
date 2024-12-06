@@ -15,6 +15,12 @@ namespace KooliProjekt.Data
 
         public required string Description { get; set; }
 
+        // AssetID (Dropdown jaoks)
+        public int? AssetID { get; set; }
+
+        // ClassID (Dropdown jaoks)
+        public int? SelectedClassID { get; set; }
+
 
     }
 
