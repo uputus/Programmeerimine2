@@ -46,7 +46,6 @@ namespace KooliProjekt.Controllers
         public IActionResult Create()
         {
             // Andmete ettevalmistamine dropdown-iks
-            ViewData["Assets"] = new SelectList(_context.Assets, "AssetID", "Name");
             ViewData["InvestmentClasses"] = new SelectList(_context.InvestmentClasses, "ClassID", "Name");
 
             return View();

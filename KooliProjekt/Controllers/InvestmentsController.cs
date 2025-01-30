@@ -47,7 +47,7 @@ namespace KooliProjekt.Controllers
         // GET: Investments/Create
         public IActionResult Create()
         {
-            ViewData["AssetID"] = new SelectList(_context.Assets, "AssetID", "AssetType");
+            ViewBag.AssetID = new SelectList(_context.Assets, "AssetID", "AssetType");
             return View();
         }
 

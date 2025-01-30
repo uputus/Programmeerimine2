@@ -16,7 +16,7 @@
             <!-- Dropdown for InvestmentClass -->
             <div class="form-group">
                 <label asp-for="ClassID" class="control-label"></label>
-                <select asp-for="ClassID" asp-items="ViewData['InvestmentClasses']" class="form-control"></select>
+                <select asp-for="ClassID" asp-items="ViewBag.InvestmentClasses" class="form-control"></select>
                 <span asp-validation-for="ClassID" class="text-danger"></span>
             </div>
 
