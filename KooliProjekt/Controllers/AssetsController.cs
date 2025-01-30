@@ -45,16 +45,11 @@ namespace KooliProjekt.Controllers
         // GET: Assets/Create
         public IActionResult Create()
         {
-            // Andmete ettevalmistamine dropdown-iks
-            ViewData["InvestmentClasses"] = new SelectList(_context.InvestmentClasses, "ClassID", "Name");
-
+            // Me ei kasuta siin ViewData ega SelectListi, kuna kasutan lihtsalt tekstivälja.
             return View();
         }
 
-
         // POST: Assets/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AssetID,Name,ClassID,AssetType,AssetDetails")] Asset asset)
@@ -85,8 +80,6 @@ namespace KooliProjekt.Controllers
         }
 
         // POST: Assets/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("AssetID,Name,ClassID,AssetType,AssetDetails")] Asset asset)
@@ -156,8 +149,5 @@ namespace KooliProjekt.Controllers
         {
             return _context.Assets.Any(e => e.AssetID == id);
         }
-
-      
-
     }
 }

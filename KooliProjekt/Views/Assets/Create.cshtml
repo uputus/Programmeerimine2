@@ -13,13 +13,15 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <!-- Dropdown for InvestmentClass -->
+            <!-- Muudetud vormi osa: ClassID asemel tekstisisend -->
             <div class="form-group">
                 <label asp-for="ClassID" class="control-label"></label>
-                <select asp-for="ClassID" asp-items="ViewBag.InvestmentClasses" class="form-control"></select>
+                <!-- Asendame dropdowni tavalise tekstiväljaga -->
+                <input asp-for="ClassID" class="form-control" />
                 <span asp-validation-for="ClassID" class="text-danger"></span>
             </div>
 
+            <!-- Teised väljad jäävad samaks -->
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />

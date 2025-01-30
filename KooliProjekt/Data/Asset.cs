@@ -7,7 +7,7 @@ namespace KooliProjekt.Data
     {
         [Key]
         public int AssetID { get; set; }
-
+    
         [Required]
         [StringLength(100)]
         public required string Name { get; set; }
