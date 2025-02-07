@@ -24,7 +24,13 @@ namespace KooliProjekt.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Konfigureerige seosed, võite lisada täiendavaid seadistusi siin
+            modelBuilder.Entity<Asset>()
+                .HasKey(a => a.AssetID);
+
+            modelBuilder.Entity<Transaction>()
+                .HasKey(t => t.TransactionID);
+
+            // Define other relationships and configurations
         }
     }
 }
