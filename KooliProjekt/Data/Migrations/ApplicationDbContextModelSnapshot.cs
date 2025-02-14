@@ -170,9 +170,6 @@ namespace KooliProjekt.Data.Migrations
                     b.Property<float>("Quantity")
                         .HasColumnType("real");
 
-                    b.Property<int>("TransactionID")
-                        .HasColumnType("int");
-
                     b.Property<string>("TransactionType")
                         .IsRequired()
                         .HasMaxLength(50)
