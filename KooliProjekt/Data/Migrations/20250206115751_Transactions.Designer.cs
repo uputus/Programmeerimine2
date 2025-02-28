@@ -18,7 +18,6 @@ namespace KooliProjekt.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            // Define the schema changes for the migration here
             migrationBuilder.CreateTable(
                 name: "Transactions",
                 columns: table => new
