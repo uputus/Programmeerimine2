@@ -1,7 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace KooliProjekt.Data
-{
     public class Transaction
     {
         public int TransactionID { get; set; }
@@ -13,9 +11,7 @@ namespace KooliProjekt.Data
         public int ClassID { get; set; }
         [Required]
         public DateTime Date { get; set; }
-
         public float Quantity { get; set; }
-
         public float TransactionValue { get; set; }
 
         [Required]
